@@ -5,15 +5,14 @@ var app = express()
 var ws = require("nodejs-websocket")
 var _ = require('underscore')
 var moment = require('moment')
-var monk = require('monk')('lounas:kabobsy@lounas.apps.avarko.com:11051/lounas')
+var monk = require('monk')('###')
 
 var input = new Bacon.Bus()
 var problems = new Bacon.Bus()
 
 var wsc
 function initWs() {
-	//wsc = ws.connect('ws://192.168.0.132:3000/ws', () => {
-	wsc = ws.connect('ws://lounasflow.herokuapp.com/ws', () => {
+	wsc = ws.connect('###', () => {
 	  console.log('connected')
 	})
 
